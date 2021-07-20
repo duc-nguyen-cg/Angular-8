@@ -12,6 +12,8 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 import { ArticleComponent } from './hackernews/article/article.component';
 import { LikeComponent } from './hackernews/like/like.component';
+import { ParentComponent } from './demo-output/parent/parent.component';
+import { ChildComponent } from './demo-output/child/child.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LikeComponent } from './hackernews/like/like.component';
     ProductCreateComponent,
     ProductDeleteComponent,
     ArticleComponent,
-    LikeComponent
+    LikeComponent,
+    ParentComponent,
+    ChildComponent
   ],
     imports: [
         BrowserModule,
