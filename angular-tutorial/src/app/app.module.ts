@@ -15,6 +15,7 @@ import { LikeComponent } from './hackernews/like/like.component';
 import { ParentComponent } from './demo-output/parent/parent.component';
 import { ChildComponent } from './demo-output/child/child.component';
 import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NameCardComponent } from './name-card/name-card.component';
     LikeComponent,
     ParentComponent,
     ChildComponent,
-    NameCardComponent
+    NameCardComponent,
+    ProgressBarComponent
   ],
     imports: [
         BrowserModule,
