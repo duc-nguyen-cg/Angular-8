@@ -1,0 +1,23 @@
+<h3>Products</h3>
+<app-product-create></app-product-create>
+
+<table cellpadding="10">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td><button (click)="onSelect(product)">Edit</button></td>
+    <td><button>Delete</button></td>
+  </tr>
+</table>
+
+<app-products-edit [product]="editedProduct"></app-products-edit>
