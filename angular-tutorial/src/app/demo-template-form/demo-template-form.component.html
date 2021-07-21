@@ -1,0 +1,23 @@
+<h3>Template-driven Form</h3>
+<form
+  autocomplete="off"
+  #bookForm="ngForm"
+>
+  <div class="form-group" style="width: 50%">
+    <label for="bookName">Book Name</label>
+    <input id="bookName" name="name" required minlength="3" [(ngModel)]="book.name" type="text" class="form-control">
+
+    <label for="year">Year</label>
+    <input id="year" name="year" required [(ngModel)]="book.year" type="text" class="form-control">
+
+    <label for="stars">Stars</label>
+    <input id="stars" name="stars" required [(ngModel)]="book.stars" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary mr-1">Save</button>
+</form>
+<h3>Result</h3>
+<pre>{{ bookForm.value | json }}</pre>
+<h3>Errors</h3>
+<pre>{{ bookForm.controls.name?.errors | json }}</pre>
+<pre>{{ bookForm.controls.year?.errors | json }}</pre>
+<pre>{{ bookForm.controls.stars?.errors | json }}</pre>
