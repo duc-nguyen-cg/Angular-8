@@ -16,6 +16,7 @@ import { ParentComponent } from './demo-output/parent/parent.component';
 import { ChildComponent } from './demo-output/child/child.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { RatingBarComponent } from './rating-bar/rating-bar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     ParentComponent,
     ChildComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    RatingBarComponent
   ],
     imports: [
         BrowserModule,
