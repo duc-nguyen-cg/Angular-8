@@ -20,6 +20,8 @@ import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { DemoTemplateFormComponent } from './demo-template-form/demo-template-form.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { SharedDirective } from './src/shared.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
     RatingBarComponent,
     CountdownTimerComponent,
     DemoTemplateFormComponent,
-    TodoAppComponent
+    TodoAppComponent,
+    SignupFormComponent,
+    SharedDirective
   ],
     imports: [
         BrowserModule,

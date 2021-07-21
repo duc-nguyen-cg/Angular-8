@@ -1,0 +1,75 @@
+<h3>Register Form</h3>
+<form [formGroup]="accountForm" (ngSubmit)="register()">
+  <table cellpadding="10">
+    <tr>
+      <td>Email: </td>
+      <td><input type="text" formControlName="email"></td>
+      <td class='form-error' *ngIf="(email.touched && email.dirty) || isSubmitted">
+        <p *ngIf="email.errors?.required">Required</p>
+        <p *ngIf="email.errors?.email">Should be an email</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Password: </td>
+      <td><input type="text" formControlName="password"></td>
+      <td class='form-error' *ngIf="(password.touched && password.dirty) || isSubmitted">
+        <p *ngIf="password.errors?.required">Required</p>
+        <p *ngIf="password.errors?.minlength">Should have at least 6 characters</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Confirmed Password: </td>
+      <td><input type="text" formControlName="confirmPass"></td>
+      <td class='form-error' *ngIf="(confirmPass.touched && confirmPass.dirty) || isSubmitted">
+        <p *ngIf="confirmPass.errors?.required">Required</p>
+        <p *ngIf="confirmPass.errors && confirmPass.errors?.passwordMismatch">Password mismatch</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Country: </td>
+      <td>
+        <select formControlName="country">
+          <option value="" selected disabled>Choose your country</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="USA">USA</option>
+          <option value="Germany">Germany</option>
+        </select>
+      </td>
+      <td class='form-error' *ngIf="(country.touched && country.dirty) || isSubmitted">
+        <p *ngIf="country.errors?.required">Required</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Age: </td>
+      <td><input type="number" formControlName="age"></td>
+      <td class='form-error' *ngIf="(age.touched && age.dirty) || isSubmitted">
+        <p *ngIf="age.errors?.required">Required</p>
+        <p *ngIf="age.errors?.min">Should be at least 18 years old</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Gender: </td>
+      <td>
+        <input type="radio" formControlName="gender" value="Male"> Male
+        <input type="radio" formControlName="gender" value="Female"> Female
+      </td>
+      <td class='form-error' *ngIf="(gender.touched && gender.dirty) || isSubmitted">
+        <p *ngIf="gender.errors?.required">Required</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Phone: </td>
+      <td><input type="text" formControlName="phone"></td>
+      <td class='form-error' *ngIf="(phone.touched && phone.dirty) || isSubmitted">
+        <p *ngIf="phone.errors?.required">Required</p>
+        <p *ngIf="phone.errors?.pattern">Should be a valid phone number</p>
+      </td>
+    </tr>
+    <button type="submit">Register</button>
+  </table>
+</form>
+
+<h3>Account's List</h3>
+<div *ngFor="let acc of accounts">
+  <p>{{acc | json}}</p>
+</div>
