@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './tutorial/heroes/heroes.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeroDetailComponent } from './tutorial/hero-detail/hero-detail.component';
 import { ProductsComponent } from './product/product-list/products.component';
 import { ProductsEditComponent } from './product/products-edit/products-edit.component';
@@ -19,6 +19,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { DemoTemplateFormComponent } from './demo-template-form/demo-template-form.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +38,14 @@ import { DemoTemplateFormComponent } from './demo-template-form/demo-template-fo
     ProgressBarComponent,
     RatingBarComponent,
     CountdownTimerComponent,
-    DemoTemplateFormComponent
+    DemoTemplateFormComponent,
+    TodoAppComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

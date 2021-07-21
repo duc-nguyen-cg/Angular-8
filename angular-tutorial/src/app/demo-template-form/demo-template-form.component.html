@@ -2,16 +2,21 @@
 <form
   autocomplete="off"
   #bookForm="ngForm"
+  (ngSubmit)="addBook(bookForm)"
 >
-  <div class="form-group" style="width: 50%">
+  <div style="width: 50%">
     <label for="bookName">Book Name</label>
-    <input id="bookName" name="name" required minlength="3" [(ngModel)]="book.name" type="text" class="form-control">
+    <input id="bookName" #name="ngModel" name="name" required minlength="3" [(ngModel)]="newBook.name" type="text" class="form-control">
+    <div *ngIf="bookForm.invalid && bookForm.touched">
+    <p class="error" *ngIf="name.errors?.required">Required</p>
+    <p class="error" *ngIf="name.errors?.minlength">Should have at least 3 characters</p>
+    </div>
 
     <label for="year">Year</label>
-    <input id="year" name="year" required [(ngModel)]="book.year" type="text" class="form-control">
+    <input id="year" name="year" required [(ngModel)]="newBook.year" type="text" class="form-control">
 
     <label for="stars">Stars</label>
-    <input id="stars" name="stars" required [(ngModel)]="book.stars" type="text" class="form-control">
+    <input id="stars" name="stars" required [(ngModel)]="newBook.stars" type="text" class="form-control">
   </div>
   <button type="submit" class="btn btn-primary mr-1">Save</button>
 </form>
@@ -21,3 +26,7 @@
 <pre>{{ bookForm.controls.name?.errors | json }}</pre>
 <pre>{{ bookForm.controls.year?.errors | json }}</pre>
 <pre>{{ bookForm.controls.stars?.errors | json }}</pre>
+<h3>List</h3>
+<div *ngFor="let b of books">
+  <pre>{{ b | json}}</pre>
+</div>
