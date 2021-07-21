@@ -21,7 +21,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
 import { DemoTemplateFormComponent } from './demo-template-form/demo-template-form.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { SharedDirective } from './src/shared.directive';
+import { SigninFormComponent } from './signin-form/signin-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { SharedDirective } from './src/shared.directive';
     DemoTemplateFormComponent,
     TodoAppComponent,
     SignupFormComponent,
-    SharedDirective
+    SigninFormComponent
   ],
     imports: [
         BrowserModule,

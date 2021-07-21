@@ -1,0 +1,25 @@
+<h3>Login Form</h3>
+<form [formGroup]="signinForm" (ngSubmit)="login()">
+  <table cellpadding="10">
+    <tr>
+      <td>Email: </td>
+      <td><input type="text" formControlName="email"></td>
+      <td class='form-error' *ngIf="(email.touched && email.dirty) || isSubmitted">
+        <p *ngIf="email.errors?.required">Required</p>
+        <p *ngIf="email.errors?.email">Should be an email</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Password: </td>
+      <td><input type="text" formControlName="password"></td>
+      <td class='form-error' *ngIf="(password.touched && password.dirty) || isSubmitted">
+        <p *ngIf="password.errors?.required">Required</p>
+        <p *ngIf="password.errors?.minlength">Should have at least 6 characters</p>
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Login</button>
+</form>
+<p class="alert-success" *ngIf="isLogin">Logged in successfully</p>
+<p class="form-error" *ngIf="isSubmitted && !isLogin">Your email or password is incorrect</p>
+
