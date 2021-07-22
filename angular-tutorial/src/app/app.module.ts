@@ -22,6 +22,7 @@ import { DemoTemplateFormComponent } from './demo-template-form/demo-template-fo
 import { TodoAppComponent } from './todo-app/todo-app.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SigninFormComponent } from './signin-form/signin-form.component';
+import { TimelinesComponent } from './timelines/timelines.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SigninFormComponent } from './signin-form/signin-form.component';
     DemoTemplateFormComponent,
     TodoAppComponent,
     SignupFormComponent,
-    SigninFormComponent
+    SigninFormComponent,
+    TimelinesComponent
   ],
     imports: [
         BrowserModule,
