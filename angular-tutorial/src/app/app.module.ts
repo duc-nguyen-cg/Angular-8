@@ -23,6 +23,8 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SigninFormComponent } from './signin-form/signin-form.component';
 import { TimelinesComponent } from './timelines/timelines.component';
+import { MusicPlaylistComponent } from './music-player/component/music-playlist/music-playlist.component';
+import { SongPlayerComponent } from './music-player/component/song-player/song-player.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { TimelinesComponent } from './timelines/timelines.component';
     TodoAppComponent,
     SignupFormComponent,
     SigninFormComponent,
-    TimelinesComponent
+    TimelinesComponent,
+    MusicPlaylistComponent,
+    SongPlayerComponent
   ],
     imports: [
         BrowserModule,
